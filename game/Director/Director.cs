@@ -8,9 +8,10 @@ namespace test.Game
         public Director()
         {
         }
+        bool isPlaying = true;
         public void StartGame()
         {
-            while (isPlaying == True)
+            while (isPlaying == true)
             {
                 getInputs();
                 doUpdates();
