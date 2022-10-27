@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace test.Game
+namespace Lab04.Game
 {
     public class Director
     {

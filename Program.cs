@@ -1,4 +1,4 @@
-﻿using test.Game;
+﻿using Lab04.Game;
 
 namespace test
 {
