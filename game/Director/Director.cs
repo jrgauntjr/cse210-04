@@ -16,6 +16,8 @@ namespace Lab04.Game.director
         private KeyboardService _keyboardService = null;
         private VideoService _videoService = null;
 
+        int _score = 0;
+
         /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
         /// </summary>
