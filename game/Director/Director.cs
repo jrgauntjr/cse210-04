@@ -73,7 +73,7 @@ namespace Lab04.Game.director
             {
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor;
+                    fallingObject artifact = (fallingObject) actor;
                     string message = artifact.GetMessage();
                     banner.SetText(message);
                 }
