@@ -14,10 +14,7 @@ namespace Lab04.Game.services
         private int _frameRate = 0;
         private bool _debug = false;
 
-        /// <summary>
-        /// Constructs a new instance of KeyboardService using the given cell size.
-        /// </summary>
-        /// <param name="cellSize">The cell size (in pixels).</param>
+
         public VideoService(string caption, int width, int height, int cellSize, int frameRate, 
                 bool debug)
         {

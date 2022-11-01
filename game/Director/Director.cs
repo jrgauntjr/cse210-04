@@ -3,7 +3,7 @@ using Lab04.Game.actors;
 using Lab04.Game.services;
 
 
-namespace Lab04.Game
+namespace Lab04.Game.director
 {
     /// <summary>
     /// <para>A person who directs the game.</para>
