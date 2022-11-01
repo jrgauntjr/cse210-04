@@ -1,10 +1,11 @@
 using System;
 using Raylib_cs;
 using System.Collections.Generic;
+using Lab04.Game.actors;
 
 namespace Lab04.Game.services
 {
-    public class videoservice
+    public class VideoService
     
     {
         private int _cellSize = 15;
@@ -58,7 +59,7 @@ namespace Lab04.Game.services
             int x = actor.GetPosition().GetX();
             int y = actor.GetPosition().GetY();
             int fontSize = actor.GetFontSize();
-            Casting.Color c = actor.GetColor();
+            actors.Color c = actor.GetColor();
             Raylib_cs.Color color = ToRaylibColor(c);
             Raylib.DrawText(text, x, y, fontSize, color);
         }
@@ -149,7 +150,7 @@ namespace Lab04.Game.services
         /// </summary>
         /// <param name="color">The color to convert.</param>
         /// <returns>A Raylib color.</returns>
-        private Raylib_cs.Color ToRaylibColor(Casting.Color color)
+        private Raylib_cs.Color ToRaylibColor(actors.Color color)
         {
             int r = color.GetRed();
             int g = color.GetGreen();
