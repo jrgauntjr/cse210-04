@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Unit04.Game.Casting;
-using Unit04.Game.Services;
+using Lab04.game.Casting;
+using Lab04.game.Services;
 
 
-namespace Unit04.Game.Directing
+namespace Lab04.Game
 {
     /// <summary>
     /// <para>A person who directs the game.</para>

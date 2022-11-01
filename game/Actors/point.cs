@@ -1,8 +1,7 @@
 using System;
-
 using System.Collections.Generic;
 
-namespace Lab04.Game
+namespace Lab04.Game.actors
 {
     public class Point
     {
