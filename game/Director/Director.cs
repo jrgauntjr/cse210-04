@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Lab04.game.Casting;
-using Lab04.game.Services;
+using Lab04.Game.actors;
+using Lab04.Game.services;
 
 
 namespace Lab04.Game
