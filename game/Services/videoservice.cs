@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Lab04.Game.services
 {
-    public class videoservice
+    public class VideoService
     
     {
         private int _cellSize = 15;
