@@ -2,7 +2,7 @@ using Raylib_cs;
 using Unit04.Game.Casting;
 
 
-namespace Unit04.Game.Services
+namespace Lab04.game.services
 {
     /// <summary>
     /// <para>Detects player input.</para>

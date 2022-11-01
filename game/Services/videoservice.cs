@@ -2,7 +2,7 @@ using System;
 
 using System.Collections.Generic;
 
-namespace Lab04.Game
+namespace Lab04.Game.services
 {
     public class videoservice
     
