@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace Unit04.Game.Casting
+namespace Unit04.Game.actors
 {
     /// <summary>
     /// <para>A color.</para>
