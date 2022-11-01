@@ -20,14 +20,18 @@ namespace Lab04.Game
         }
         public void getInputs()
         {
+            // getKeyboard();
         }
 
         public void doUpdates()
         {
+            //fallingObject.move;
+            //player.move;
         }
 
         public void doOutputs()
         {
+            //getVideoService;
         }
     }
 }
