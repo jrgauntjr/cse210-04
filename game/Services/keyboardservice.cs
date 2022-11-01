@@ -1,8 +1,8 @@
 using Raylib_cs;
-using Unit04.Game.actors;
+using Lab04.Game.actors;
 
 
-namespace Lab04.game.services
+namespace Lab04.Game.services
 {
     /// <summary>
     /// <para>Detects player input.</para>
