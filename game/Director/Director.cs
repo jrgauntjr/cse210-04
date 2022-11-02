@@ -51,9 +51,9 @@ namespace Lab04.Game.director
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor robot = cast.GetFirstActor("robot");
+            Actor player = cast.GetFirstActor("player");
             Point velocity = _keyboardService.GetDirection();
-            robot.SetVelocity(velocity);     
+            player.SetVelocity(velocity);     
         }
 
         /// <summary>
@@ -62,22 +62,19 @@ namespace Lab04.Game.director
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
-            Actor banner = cast.GetFirstActor("banner");
-            Actor robot = cast.GetFirstActor("robot");
+            Actor player = cast.GetFirstActor("player");
             List<Actor> artifacts = cast.GetActors("artifacts");
 
-            banner.SetText("");
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
-            robot.MoveNext(maxX, maxY);
+            player.MoveNext(maxX, maxY);
 
             foreach (Actor actor in artifacts)
             {
-                if (robot.GetPosition().Equals(actor.GetPosition()))
+                if (player.GetPosition().Equals(actor.GetPosition()))
                 {
                     fallingObject artifact = (fallingObject) actor;
-                    string message = artifact.GetMessage();
-                    banner.SetText(message);
+                    //call score function to update score
                 }
             } 
         }
