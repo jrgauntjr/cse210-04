@@ -63,17 +63,17 @@ namespace Lab04.Game.director
         private void DoUpdates(Cast cast)
         {
             Actor player = cast.GetFirstActor("player");
-            List<Actor> artifacts = cast.GetActors("artifacts");
+            List<Actor> _fallingObject_List = cast.GetActors("fallingObjects");
 
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
             player.MoveNext(maxX, maxY);
 
-            foreach (Actor actor in artifacts)
+            foreach (Actor actor in _fallingObject_List)
             {
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
-                    fallingObject artifact = (fallingObject) actor;
+                    fallingObject _fallingObject = (fallingObject) actor;
                     //call score function to update score
                 }
             } 
