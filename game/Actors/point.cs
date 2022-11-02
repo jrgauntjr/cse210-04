@@ -19,6 +19,13 @@ namespace Lab04.Game.actors
             return new Point(x, y);
         }
 
+        public Point Sub(Point other)
+        {
+            int x = this._x - other.GetX();
+            int y = this._y = other.GetY();
+            return new Point(x,y);
+        }
+
         public bool Equals(Point other)
         {
             return this._x == other.GetX() && this._y == other.GetY();
