@@ -69,10 +69,10 @@ namespace Lab04.Game.actors
         /// </summary>
         /// <param name="maxX">The maximum x value.</param>
         /// <param name="maxY">The maximum y value.</param>
-        public void MoveNext(int maxX, int maxY)
+        public void MoveNext(int minX)
         {
-            int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            int x = ((_position.GetX() + _velocity.GetX()) + minX) % minX;
+            int y = 1;
             _position = new Point(x, y);
         }
 
