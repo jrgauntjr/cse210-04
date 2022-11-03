@@ -46,7 +46,7 @@ namespace Lab04
             cast.AddActor("player", player);
 
 
-            // create the artifacts
+            /** create the artifacts
             Random random = new Random();
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
@@ -63,6 +63,7 @@ namespace Lab04
                 Color color = new Color(r, g, b);
 
             }
+            **/
 
             // start the game
             KeyboardService keyboardService = new KeyboardService(CELL_SIZE);
