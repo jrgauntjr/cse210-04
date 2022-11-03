@@ -51,7 +51,6 @@ namespace Lab04
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
                 string text = ((char)random.Next(33, 126)).ToString();
-                string message = messages[i];
 
                 int x = random.Next(1, COLS);
                 int y = random.Next(1, ROWS);
