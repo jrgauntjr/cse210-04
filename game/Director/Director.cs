@@ -64,16 +64,18 @@ namespace Lab04.Game.director
         {
             Actor player = cast.GetFirstActor("player");
             List<Actor> _fallingObject_List = cast.GetActors("fallingObjects");
-
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
             player.MoveNext(maxX, maxY);
 
             foreach (Actor actor in _fallingObject_List)
             {
+                actor.GetPosition();
+                actor.GetVelocity();
+
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
-                    fallingObject _fallingObject = (fallingObject) actor;
+                    fallingObject _collisions = (fallingObject) actor;
                     //call score function to update score
                 }
             } 
