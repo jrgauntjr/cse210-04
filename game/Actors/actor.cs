@@ -9,6 +9,7 @@ namespace Lab04.Game.actors
         private Color _color = new Color(255, 255, 255); // white
         private Point _position = new Point(0, 0);
         private Point _velocity = new Point(0, 0);
+        private int _score = 0;
 
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -146,6 +147,14 @@ namespace Lab04.Game.actors
                 throw new ArgumentException("velocity can't be null");
             }
             this._velocity = velocity;
+        }
+        public void setScore(int score)
+        {
+            if (score == null)
+            {
+                throw new ArgumentException("score can't be null");
+            }
+            this._score = score;
         }
 
     }

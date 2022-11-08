@@ -21,6 +21,7 @@ namespace Lab04.Game.actors
            Point _currentV = GetVelocity();
             SetPosition(new Point (_currentP.GetX(), (_currentP.GetY() + _currentV.GetY())));
         }
+        
 
     }
 }

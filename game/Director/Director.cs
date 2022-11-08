@@ -83,23 +83,13 @@ namespace Lab04.Game.director
 
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
-                    fallingObject _collisions = (fallingObject) actor;
-
-                    // if (_collisions = this.rock){
-
-                    //         _score = _score + 10;
-
-                    // } else{
-                    //     _score = _score - 10;
-                    // }
+                    //fallingObject _collisions = (fallingObject) actor;
+                
                 }
             }
         }
 
-        /// <summary>
-        /// Draws the actors on the screen.
-        /// </summary>
-        /// <param name="cast">The given cast.</param>
+        // Draws the actors on the screen.
         public void DoOutputs(Cast cast)
         {
             List<Actor> actors = cast.GetAllActors();
