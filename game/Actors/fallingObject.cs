@@ -7,31 +7,23 @@ namespace Lab04.Game.actors
     public class fallingObject : Actor
     
     {
-         private string _message = "";
-
-        /// <summary>
-        /// Constructs a new instance of an Artifact.
-        /// </summary>
+        Random random = new Random();
         public fallingObject()
         {
+            SetPosition(new Point(random.Next(0,1000),0));
+
+            SetVelocity(new Point(0,10));
+
+            SetText("@");
+
+            SetColor(new Color(20,75,82));
+
         }
 
-        /// <summary>
-        /// Gets the artifact's message.
-        /// </summary>
-        /// <returns>The message.</returns>
-        public string GetMessage()
-        {
-            return _message;
-        }
-
-        /// <summary>
-        /// Sets the artifact's message to the given value.
-        /// </summary>
-        /// <param name="message">The given message.</param>
-        public void SetMessage(string message)
-        {
-            this._message = message;
+        public void Move(){
+           Point _currentP = GetPosition();
+           Point _currentV = GetVelocity();
+            SetPosition(new Point (_currentP.GetX(), (_currentP.GetY() + _currentV.GetY())));
         }
 
     }

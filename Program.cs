@@ -39,7 +39,7 @@ namespace Lab04
             cast.AddActor("banner", banner);
 
             Actor player = new Actor();
-            player.SetText("#");
+            player.SetText("l");
             player.SetFontSize(FONT_SIZE);
             player.SetColor(WHITE);
             player.SetPosition(new Point(MAX_X / 2, MAX_Y / 2));

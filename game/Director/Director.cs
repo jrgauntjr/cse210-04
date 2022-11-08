@@ -61,24 +61,39 @@ namespace Lab04.Game.director
         /// </summary>
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
-        {
+        {   
+            Rock rock = new Rock();
+            Gem gem = new Gem();
+
+            cast.AddActor("fallingObjects",rock);
+            cast.AddActor("fallingObjects", gem);
+
+
             Actor player = cast.GetFirstActor("player");
             List<Actor> _fallingObject_List = cast.GetActors("fallingObjects");
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
             player.MoveNext(maxX, maxY);
 
-            foreach (Actor actor in _fallingObject_List)
+            foreach (fallingObject actor in _fallingObject_List)
             {
                 actor.GetPosition();
                 actor.GetVelocity();
+                actor.Move();
 
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
                     fallingObject _collisions = (fallingObject) actor;
-                    //call score function to update score
+
+                    // if (_collisions = this.rock){
+
+                    //         _score = _score + 10;
+
+                    // } else{
+                    //     _score = _score - 10;
+                    // }
                 }
-            } 
+            }
         }
 
         /// <summary>
