@@ -14,10 +14,6 @@ namespace Lab04.Game.actors
 
             SetVelocity(new Point(0,10));
 
-            SetText("@");
-
-            SetColor(new Color(20,75,82));
-
         }
 
         public void Move(){
