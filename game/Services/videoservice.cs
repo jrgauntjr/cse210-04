@@ -8,7 +8,7 @@ namespace Lab04.Game.services
     public class VideoService
     
     {
-        private int _cellSize = 15;
+        private int _cellSize = 7;
         private string _caption = "";
         private int _width = 640;
         private int _height = 480;
