@@ -16,6 +16,8 @@ namespace Lab04.Game.director
         private KeyboardService _keyboardService = null;
         private VideoService _videoService = null;
 
+        Point point = new Point(15,0);
+
         int _score = 0;
 
         /// <summary>
@@ -64,10 +66,14 @@ namespace Lab04.Game.director
         {   
             Rock rock = new Rock();
             Gem gem = new Gem();
+            Actor score = new Actor();
 
             cast.AddActor("fallingObjects",rock);
             cast.AddActor("fallingObjects", gem);
-
+            cast.AddActor("score", score);
+        
+            score.SetPosition(point);
+            score.SetText("Score: " + _score);
 
             Actor player = cast.GetFirstActor("player");
             List<Actor> _fallingObject_List = cast.GetActors("fallingObjects");
@@ -83,8 +89,10 @@ namespace Lab04.Game.director
 
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
-                    //fallingObject _collisions = (fallingObject) actor;
-                    actor.GetScore();
+                    // fallingObject _collisions = (fallingObject) actor;
+                    _score = actor.GetScore();
+                    cast.RemoveActor("fallingObjects", actor);
+
                 }
             }
         }
