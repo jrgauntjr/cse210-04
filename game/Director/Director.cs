@@ -84,7 +84,7 @@ namespace Lab04.Game.director
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
                     //fallingObject _collisions = (fallingObject) actor;
-                
+                    actor.GetScore();
                 }
             }
         }
