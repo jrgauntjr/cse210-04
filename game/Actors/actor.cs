@@ -63,6 +63,11 @@ namespace Lab04.Game.actors
             return _velocity;
         }
 
+        public int GetScore()
+        {
+            return _score;
+        }
+
         /// <summary>
         /// Moves the actor to its next position according to its velocity. Will wrap the position 
         /// from one side of the screen to the other when it reaches the maximum x and y 
