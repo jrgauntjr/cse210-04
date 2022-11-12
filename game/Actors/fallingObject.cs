@@ -10,9 +10,11 @@ namespace Lab04.Game.actors
         Random random = new Random();
         public fallingObject()
         {
-            SetPosition(new Point(random.Next(0,1000),0));
+            int numba = (random.Next(0,60))*15;
 
-            SetVelocity(new Point(0,10));
+            SetPosition(new Point(numba,0));
+
+            SetVelocity(new Point(0,2));
 
         }
 

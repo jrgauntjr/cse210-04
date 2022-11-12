@@ -9,7 +9,7 @@ namespace Lab04
 {
     class Program
     {
-        private static int FRAME_RATE = 12;
+        private static int FRAME_RATE = 15;
         private static int MAX_X = 900;
         private static int MAX_Y = 600;
         private static int CELL_SIZE = 15;
