@@ -17,8 +17,7 @@ namespace Lab04.Game.director
         private VideoService _videoService = null;
 
         Point point = new Point(15,0);
-
-        int _screen = _videoService.GetHeight();
+        Actor score = new Actor();
 
 
 
@@ -70,7 +69,7 @@ namespace Lab04.Game.director
         {   
             Rock rock = new Rock();
             Gem gem = new Gem();
-            Actor score = new Actor();
+            
 
             cast.AddActor("fallingObjects",rock);
             cast.AddActor("fallingObjects", gem);
@@ -78,6 +77,7 @@ namespace Lab04.Game.director
         
             score.SetPosition(point);
             score.SetText("Score: " + _score);
+            
 
             Actor player = cast.GetFirstActor("player");
             List<Actor> _fallingObject_List = cast.GetActors("fallingObjects");
@@ -98,10 +98,10 @@ namespace Lab04.Game.director
                     cast.RemoveActor("fallingObjects", actor);
 
                 }
-                if (_screen.GetHeight().Equal(actor.GetPosition())){
+                // if (_screen.GetHeight().Equal(actor.GetPosition())){
 
-                     cast.RemoveActor("fallingObjects", actor);
-                }
+                //      cast.RemoveActor("fallingObjects", actor);
+                // }
             }       
         }
 
