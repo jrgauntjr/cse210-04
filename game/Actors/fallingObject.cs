@@ -14,7 +14,7 @@ namespace Lab04.Game.actors
 
             SetPosition(new Point(numba,0));
 
-            SetVelocity(new Point(0,2));
+            SetVelocity(new Point(0,10));
 
         }
 

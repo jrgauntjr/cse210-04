@@ -18,6 +18,10 @@ namespace Lab04.Game.director
 
         Point point = new Point(15,0);
 
+        int _screen = _videoService.GetHeight();
+
+
+
         int _score = 0;
 
         /// <summary>
@@ -94,7 +98,11 @@ namespace Lab04.Game.director
                     cast.RemoveActor("fallingObjects", actor);
 
                 }
-            }
+                if (_screen.GetHeight().Equal(actor.GetPosition())){
+
+                     cast.RemoveActor("fallingObjects", actor);
+                }
+            }       
         }
 
         // Draws the actors on the screen.
