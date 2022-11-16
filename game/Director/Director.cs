@@ -5,12 +5,7 @@ using Lab04.Game.services;
 
 namespace Lab04.Game.director
 {
-    /// <summary>
-    /// <para>A person who directs the game.</para>
-    /// <para>
-    /// The responsibility of a Director is to control the sequence of play.
-    /// </para>
-    /// </summary>
+    /// The responsibility of the Director is to control the sequence of play.
     public class Director
     {
         private KeyboardService _keyboardService = null;
@@ -18,26 +13,16 @@ namespace Lab04.Game.director
 
         Point point = new Point(15,0);
         Actor score = new Actor();
-
-
-
         int _score = 0;
 
-        /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
-        /// </summary>
-        /// <param name="keyboardService">The given KeyboardService.</param>
-        /// <param name="videoService">The given VideoService.</param>
         public Director(KeyboardService keyboardService, VideoService videoService)
         {
             this._keyboardService = keyboardService;
             this._videoService = videoService;
         }
 
-        /// <summary>
         /// Starts the game by running the main game loop for the given cast.
-        /// </summary>
-        /// <param name="cast">The given cast.</param>
         public void StartGame(Cast cast)
         {
             _videoService.OpenWindow();
@@ -50,10 +35,7 @@ namespace Lab04.Game.director
             _videoService.CloseWindow();
         }
 
-        /// <summary>
-        /// Gets directional input from the keyboard and applies it to the robot.
-        /// </summary>
-        /// <param name="cast">The given cast.</param>
+        /// Gets directional input from the keyboard and applies it to the player.
         private void GetInputs(Cast cast)
         {
             Actor player = cast.GetFirstActor("player");
@@ -61,17 +43,14 @@ namespace Lab04.Game.director
             player.SetVelocity(velocity);     
         }
 
-        /// <summary>
-        /// Updates the robot's position and resolves any collisions with artifacts.
-        /// </summary>
-        /// <param name="cast">The given cast.</param>
+        // Updates the game, determining if a gem or rock has been hit
         private void DoUpdates(Cast cast)
         {   
             Rock rock = new Rock();
             Gem gem = new Gem();
             
 
-            cast.AddActor("fallingObjects",rock);
+            cast.AddActor("fallingObjects", rock);
             cast.AddActor("fallingObjects", gem);
             cast.AddActor("score", score);
         
@@ -85,6 +64,7 @@ namespace Lab04.Game.director
             int maxY = _videoService.GetHeight();
             player.MoveNext(maxX, maxY);
 
+            // If a player hits a rock or gem, add or subtract the score and remove the actor
             foreach (fallingObject actor in _fallingObject_List)
             {
                 actor.GetPosition();
@@ -93,15 +73,9 @@ namespace Lab04.Game.director
 
                 if (player.GetPosition().Equals(actor.GetPosition()))
                 {
-                    // fallingObject _collisions = (fallingObject) actor;
                     _score = _score + actor.GetScore();
                     cast.RemoveActor("fallingObjects", actor);
-
                 }
-                // if (_screen.GetHeight().Equal(actor.GetPosition())){
-
-                //      cast.RemoveActor("fallingObjects", actor);
-                // }
             }       
         }
 

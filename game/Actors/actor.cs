@@ -153,6 +153,11 @@ namespace Lab04.Game.actors
             }
             this._velocity = velocity;
         }
+        /// <summary>
+        /// Sets the actor's score to the given value.
+        /// </summary>
+        /// <param name="score">The given score.</param>
+        /// <exception cref="ArgumentException">When score is null.</exception>
         public void setScore(int score)
         {
             if (score == null)

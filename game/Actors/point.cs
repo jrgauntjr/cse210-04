@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Lab04.Game.actors
 {
+    // Determination of where actors could be determined by coordinate
     public class Point
     {
         private int _x = 0;
