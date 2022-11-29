@@ -6,7 +6,6 @@ using Lab04.Game.actors;
 namespace Lab04.Game.services
 {
     public class VideoService
-    
     {
         private int _cellSize = 15;
         private string _caption = "";
@@ -16,7 +15,7 @@ namespace Lab04.Game.services
         private bool _debug = false;
 
 
-        public VideoService(string caption, int width, int height, int cellSize, int frameRate, 
+        public VideoService(string caption, int width, int height, int cellSize, int frameRate,
                 bool debug)
         {
             this._caption = caption;
@@ -75,7 +74,7 @@ namespace Lab04.Game.services
                 DrawActor(actor);
             }
         }
-        
+
         /// <summary>
         /// Copies the buffer contents to the screen. This method should be called at the end of
         /// the game's output phase.
