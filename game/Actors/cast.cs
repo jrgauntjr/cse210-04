@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Lab04.Game.actors
 {
-     public class Cast
+    public class Cast
     {
         private Dictionary<string, List<Actor>> _actors = new Dictionary<string, List<Actor>>();
 
@@ -67,7 +67,7 @@ namespace Lab04.Game.actors
         /// </summary>
         /// <param name="group">The group name.</param>
         /// <returns>The first actor.</returns>
-        public Actor? GetFirstActor(string group)
+        public Actor GetFirstActor(string group)
         {
             if (_actors.ContainsKey(group))
             {
@@ -77,7 +77,7 @@ namespace Lab04.Game.actors
                     return result;
                 }
             }
-            return null;
+            return new Actor();
         }
 
         /// <summary>
