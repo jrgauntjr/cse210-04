@@ -9,7 +9,7 @@ namespace Lab04.Game.services
     {
         private int _cellSize = 15;
         private string _caption = "";
-        private int _width = 640;
+        private int _width = 900;
         private int _height = 480;
         private int _frameRate = 0;
         private bool _debug = false;

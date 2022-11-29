@@ -9,7 +9,7 @@ namespace Lab04
 {
     class Program
     {
-        private static int FRAME_RATE = 12;
+        private static int FRAME_RATE = 15;
         private static int MAX_X = 900;
         private static int MAX_Y = 600;
         private static int CELL_SIZE = 15;
@@ -39,7 +39,7 @@ namespace Lab04
             cast.AddActor("banner", banner);
 
             Actor player = new Actor();
-            player.SetText("l");
+            player.SetText("#");
             player.SetFontSize(FONT_SIZE);
             player.SetColor(WHITE);
             player.SetPosition(new Point(MAX_X / 2, MAX_Y / 2));
