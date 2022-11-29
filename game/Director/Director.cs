@@ -8,10 +8,10 @@ namespace Lab04.Game.director
     /// The responsibility of the Director is to control the sequence of play.
     public class Director
     {
-        private KeyboardService _keyboardService = null;
-        private VideoService _videoService = null;
+        private KeyboardService _keyboardService;
+        private VideoService _videoService;
 
-        Point point = new Point(15,0);
+        Point point = new Point(15, 0);
         Actor score = new Actor();
         int _score = 0;
 
@@ -40,23 +40,23 @@ namespace Lab04.Game.director
         {
             Actor player = cast.GetFirstActor("player");
             Point velocity = _keyboardService.GetDirection();
-            player.SetVelocity(velocity);     
+            player.SetVelocity(velocity);
         }
 
         // Updates the game, determining if a gem or rock has been hit
         private void DoUpdates(Cast cast)
-        {   
+        {
             Rock rock = new Rock();
             Gem gem = new Gem();
-            
+
 
             cast.AddActor("fallingObjects", rock);
             cast.AddActor("fallingObjects", gem);
             cast.AddActor("score", score);
-        
+
             score.SetPosition(point);
             score.SetText("Score: " + _score);
-            
+
 
             Actor player = cast.GetFirstActor("player");
             List<Actor> _fallingObject_List = cast.GetActors("fallingObjects");
@@ -76,7 +76,7 @@ namespace Lab04.Game.director
                     _score = _score + actor.GetScore();
                     cast.RemoveActor("fallingObjects", actor);
                 }
-            }       
+            }
         }
 
         // Draws the actors on the screen.

@@ -67,17 +67,17 @@ namespace Lab04.Game.actors
         /// </summary>
         /// <param name="group">The group name.</param>
         /// <returns>The first actor.</returns>
-        public Actor GetFirstActor(string group)
+        public Actor? GetFirstActor(string group)
         {
-            Actor result = null;
             if (_actors.ContainsKey(group))
             {
                 if (_actors[group].Count > 0)
                 {
-                    result = _actors[group][0];
+                    Actor result = _actors[group][0];
+                    return result;
                 }
             }
-            return result;
+            return null;
         }
 
         /// <summary>
